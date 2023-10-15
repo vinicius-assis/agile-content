@@ -1,5 +1,3 @@
-import "./style.css";
-
 const Menu = () => {
   const items = new Array(9).fill("");
   return (

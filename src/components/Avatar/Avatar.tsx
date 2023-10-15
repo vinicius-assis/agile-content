@@ -1,5 +1,3 @@
-import "./style.css";
-
 const Avatar = () => {
   return <div className="avatar"></div>;
 };

@@ -7,7 +7,9 @@
 }
 
 .search-group {
+  max-width: 600px;
   width: 100%;
+  text-align: center;
 }
 
 .input-group {
@@ -34,7 +36,6 @@ input {
   border: unset;
   padding-left: 10px;
   line-height: 22px;
-  max-width: 600px;
 }
 
 input:focus-visible {
@@ -47,4 +48,11 @@ input:focus-visible {
   padding: 10px 15px;
   border-radius: 3px;
   margin-top: 30px;
+}
+
+@media (max-width: 680px) {
+  .input-group {
+    width: calc(100% - 40px);
+    margin: 30px auto 0;
+  }
 }

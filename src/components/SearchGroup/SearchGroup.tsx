@@ -1,6 +1,5 @@
 import { GoogleIcon } from "../Icons/Icons";
 import SearchInputGroup from "../SearchInputGroup/SearchInputGroup";
-import "./style.css";
 
 const SearchGroup = () => {
   return (

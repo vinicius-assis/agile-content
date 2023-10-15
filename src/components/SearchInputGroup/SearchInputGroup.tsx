@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CloseIcon, SearchIcon } from "../Icons/Icons";
-import "./style.css";
 
 const SearchInputGroup = () => {
   const [searchValue, setSearchValue] = useState("");
