@@ -131,3 +131,10 @@ table {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
+.container {
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

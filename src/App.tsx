@@ -1,16 +1,14 @@
 import Footer from "./components/Footer/Footer";
-import { GoogleIcon } from "./components/Icons/Icons";
 import NavBar from "./components/NavBar/NavBar";
-import SearchInputGroup from "./components/SearchInputGroup/SearchInputGroup";
+import SearchGroup from "./components/SearchGroup/SearchGroup";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <NavBar />
-      <GoogleIcon />
-      <SearchInputGroup />
+      <SearchGroup />
       <Footer />
-    </>
+    </div>
   );
 }
 
