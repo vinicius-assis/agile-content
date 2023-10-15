@@ -1,12 +1,12 @@
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
-import SearchGroup from "./components/SearchGroup/SearchGroup";
+import SearchForm from "./components/SearchForm/SearchForm";
 
 function App() {
   return (
     <div className="container">
       <NavBar />
-      <SearchGroup />
+      <SearchForm />
       <Footer />
     </div>
   );
