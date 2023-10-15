@@ -1,27 +1,28 @@
-# React + TypeScript + Vite
+# Agile Content
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Homepage
 
-Currently, two official plugins are available:
+- A search input that allows you to search for animals, the retrieved results will be
+  displayed on the results page
+- Header and footer are just visual elements, they are not interactive
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Results page
 
-## Expanding the ESLint configuration
+- A search input is displayed in the header to be able to search again
+- All retrieved results are displayed as a list
+- When clicking on an item title, additional information will be displayed in a box
+- If no results are found, a message should be displayed
+- If no search term is used, another message should be displayed
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Data
 
-- Configure the top-level `parserOptions` property like this:
+- All data is created using [faker.js](https://github.com/faker-js/faker)
+- Images are from random animals, so it’s ok if they don’t match the selected item
+- Animals are searched by both title and type
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Objectives
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [ ] Build this application as a production grade code.
+- [ ] Focus on replicating the given screenshots/design
+- [ ] Provide at least one test validating some use cases
+- [ ] What would you have done differently if you had more time? Why?
