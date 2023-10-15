@@ -1,11 +1,13 @@
-import MainIcon from "./components/MainIcon/MainIcon";
+import { GoogleIcon } from "./components/Icons/Icons";
 import NavBar from "./components/NavBar/NavBar";
+import SearchInputGroup from "./components/SearchInputGroup/SearchInputGroup";
 
 function App() {
   return (
     <>
       <NavBar />
-      <MainIcon />
+      <GoogleIcon />
+      <SearchInputGroup />
       <h1>Teste</h1>
     </>
   );
