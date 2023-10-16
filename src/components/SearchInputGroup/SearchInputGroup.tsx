@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { CloseIcon, SearchIcon } from "../Icons/Icons";
+import "./style.css";
 
-const SearchInputGroup = () => {
+const SearchInputGroup = ({ className = "" }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -11,7 +12,7 @@ const SearchInputGroup = () => {
   const handleClearInput = () => setSearchValue("");
 
   return (
-    <div className="input-group">
+    <div className={`input-group ${className}`}>
       <button>
         <SearchIcon />
       </button>

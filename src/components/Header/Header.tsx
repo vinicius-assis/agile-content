@@ -1,7 +1,8 @@
 import { IHeaderProps } from "../../protocols/header";
+import "./style.css";
 
-const Header: React.FC<IHeaderProps> = ({ children }) => {
-  return <header className="header">{children}</header>;
+const Header: React.FC<IHeaderProps> = ({ children, className = "" }) => {
+  return <header className={`header ${className}`}>{children}</header>;
 };
 
 export default Header;

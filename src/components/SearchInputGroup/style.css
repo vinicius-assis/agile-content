@@ -1,0 +1,63 @@
+.input-group {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 48px;
+  padding: 10px;
+  border-radius: 24px;
+  margin-top: 30px;
+}
+
+button {
+  background-color: unset;
+  border: unset;
+}
+
+.clear-button {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  border: unset;
+  padding-left: 10px;
+  line-height: 22px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 680px) {
+  .input-group {
+    width: calc(100% - 40px);
+    margin: 30px auto 0;
+  }
+}
+
+/* RESULT PAGE */
+
+.-result-page .input-group {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 10px;
+  height: 38px;
+}
+
+.-result-page .input-group > button > svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 680px) {
+  .-result-page .input-group {
+    width: auto;
+    height: 35px;
+    padding: 5px;
+  }
+
+  .-result-page .input-group > button > svg {
+    width: 12px;
+    height: 12px;
+  }
+}

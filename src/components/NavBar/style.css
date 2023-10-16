@@ -3,19 +3,6 @@
   align-items: center;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background-color: #fafafa;
-  border-bottom: 1px solid #eceaea;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .stronger-text {
   font-weight: 600;
 }
@@ -44,4 +31,21 @@
   border-radius: 50%;
   background-color: #ccc;
   margin-left: 1.5rem;
+}
+
+/* RESULT PAGE */
+
+.-result-page .nav-wrapper {
+  margin-left: auto;
+}
+
+.-result-page .menu {
+  width: 20px;
+  height: 20px;
+}
+
+.-result-page .avatar {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
 }

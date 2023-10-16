@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eceaea;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* RESULT PAGE */
+
+.header.-result-page {
+  justify-content: flex-start;
+}
