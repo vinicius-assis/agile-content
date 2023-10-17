@@ -89,6 +89,7 @@ video {
   font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
+  font-family: Arial, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,7 +130,6 @@ table {
 
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 .container {
