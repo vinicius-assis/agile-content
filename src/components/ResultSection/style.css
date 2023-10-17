@@ -1,0 +1,10 @@
+.result-wrapper {
+  width: calc(100% - 10rem);
+  margin: 30px auto 0;
+}
+
+@media (max-width: 680px) {
+  .result-wrapper {
+    width: calc(100% - 3rem);
+  }
+}
