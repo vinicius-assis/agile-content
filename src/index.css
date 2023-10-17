@@ -133,8 +133,16 @@ table {
 }
 
 .container {
-  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
+}
+
+.container.-home {
+  height: calc(100vh - 60px);
   justify-content: center;
+}
+
+.container.-result {
+  height: 100vh;
+  margin-top: 60px;
 }

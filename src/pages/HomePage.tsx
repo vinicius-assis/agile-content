@@ -4,11 +4,11 @@ import SearchForm from "../components/SearchForm/SearchForm";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="container -home">
       <NavBar />
       <SearchForm />
       <Footer />
-    </>
+    </div>
   );
 };
 
