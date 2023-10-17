@@ -1,7 +1,13 @@
+import ResultItem from "../ResultItem/ResultItem";
 import "./style.css";
 
 const ResultSection = () => {
-  return <div className="result-wrapper">teste</div>;
+  return (
+    <div className="result-wrapper">
+      <ResultItem />
+      <ResultItem />
+    </div>
+  );
 };
 
 export default ResultSection;
