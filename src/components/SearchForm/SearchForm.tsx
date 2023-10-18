@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import SearchGroup from "../SearchGroup/SearchGroup";
 import "./style.css";
-import { useState } from "react";
+import { SearchContext } from "../../context/SearchContext";
+import { useContext } from "react";
 
 const SearchForm = () => {
-  const [searchValue, setSearchValue] = useState("");
-
+  const { inputSearch } = useContext(SearchContext);
   const handleSubmit = (event: React.FormEvent) => event?.preventDefault();
 
   return (
     <form className="search-form" role="search" onSubmit={handleSubmit}>
-      <SearchGroup setSearchValue={setSearchValue} searchValue={searchValue} />
-      <Link to={`/result?q=${searchValue}`}>
+      <SearchGroup />
+      <Link to={`/result?q=${inputSearch}`}>
         <button className="search-button">Buscar</button>
       </Link>
     </form>

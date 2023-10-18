@@ -1,15 +1,11 @@
-import { ISearchGroup } from "../../protocols/search-group";
 import { GoogleIcon } from "../Icons/Icons";
 import SearchInputGroup from "../SearchInputGroup/SearchInputGroup";
 
-const SearchGroup = ({ setSearchValue, searchValue }: ISearchGroup) => {
+const SearchGroup = () => {
   return (
     <section className="search-group">
       <GoogleIcon />
-      <SearchInputGroup
-        setSearchValue={setSearchValue}
-        searchValue={searchValue}
-      />
+      <SearchInputGroup />
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ResultPage from "./pages/ResultPage";
 import HomePage from "./pages/HomePage";
+import { SearchProvider } from "./context/SearchContext";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <SearchProvider>
+      <RouterProvider router={router} />;
+    </SearchProvider>
+  );
 }
 
 export default App;

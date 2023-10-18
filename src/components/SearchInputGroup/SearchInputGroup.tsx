@@ -1,21 +1,16 @@
-import { ISearchGroup } from "../../protocols/search-group";
+import { useContext } from "react";
 import { CloseIcon, SearchIcon } from "../Icons/Icons";
 import "./style.css";
+import { SearchContext } from "../../context/SearchContext";
 
-interface ISearchInputGroup extends ISearchGroup {
-  className?: string;
-}
+const SearchInputGroup = ({ className = "" }) => {
+  const { setInputSearch, inputSearch } = useContext(SearchContext);
 
-const SearchInputGroup = ({
-  className = "",
-  setSearchValue,
-  searchValue,
-}: ISearchInputGroup) => {
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(event?.target?.value);
+    setInputSearch(event?.target?.value);
   };
 
-  const handleClearInput = () => setSearchValue("");
+  const handleClearInput = () => setInputSearch("");
 
   return (
     <div className={`input-group ${className}`}>
@@ -25,7 +20,7 @@ const SearchInputGroup = ({
       <input
         aria-label="Search contacts"
         type="search"
-        value={searchValue}
+        value={inputSearch}
         onChange={handleSearch}
       />
       <button className="clear-button" onClick={handleClearInput}>
