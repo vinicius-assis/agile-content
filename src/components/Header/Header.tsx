@@ -1,4 +1,3 @@
-import { IHeaderProps } from "../../protocols/header";
 import Avatar from "../Avatar/Avatar";
 import Menu from "../Menu/Menu";
 import "./style.css";
