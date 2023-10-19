@@ -26,11 +26,12 @@
 
 .avatar {
   display: block;
+}
+
+.avatar img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ccc;
-  margin-left: 1.5rem;
 }
 
 /* RESULT PAGE */
@@ -45,7 +46,5 @@
 }
 
 .-result-page .avatar {
-  width: 30px;
-  height: 30px;
   margin-left: 1rem;
 }
