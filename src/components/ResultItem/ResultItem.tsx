@@ -2,20 +2,18 @@ import "./style.css";
 
 interface IResultItemProps {
   showDetail?: () => void;
+  data?: IAnimal;
 }
 
-const ResultItem = ({ showDetail }: IResultItemProps) => {
+const ResultSkeletonItem = ({ showDetail, data }: IResultItemProps) => {
+  const { title, url, description } = data || {};
   return (
     <div className="result-item" onClick={showDetail}>
-      <cite>https://www.globo.com</cite>
-      <h2>Globo</h2>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus officia
-        voluptas, sapiente totam corporis. A ut maiores esse explicabo neque.
-        aliquam tempora delectus eveniet! Magni rerum amet delectus illum sit?
-      </p>
+      <cite>{url}</cite>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
   );
 };
 
-export default ResultItem;
+export default ResultSkeletonItem;

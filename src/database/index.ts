@@ -9,7 +9,7 @@ const getUrl = () => faker.internet.url();
 const getText = () => faker.lorem.sentences();
 const getTitle = (type: Value) => faker.animal[type]();
 
-const database: Array<IAnimals> = [...new Array(100)].map((_, index) => {
+const database: Array<IAnimal> = [...new Array(100)].map((_, index) => {
   const type = getType() as Value;
   return {
     type,

@@ -10,6 +10,10 @@
   padding: 0.75rem;
 }
 
+.item-detail img {
+  margin-bottom: 0.5rem;
+}
+
 .item-detail span {
   display: block;
   width: 100%;
