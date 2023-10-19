@@ -1,10 +1,5 @@
 import "./style.css";
 
-interface IResultItemProps {
-  showDetail?: () => void;
-  data?: IAnimal;
-}
-
 const ResultSkeletonItem = ({ showDetail, data }: IResultItemProps) => {
   const { title, url, description } = data || {};
   return (

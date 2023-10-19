@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 
-interface IItemDetailProps {
-  closeDetail: () => void;
-  data?: IAnimal;
-}
-
 const ItemDetail = ({ closeDetail, data }: IItemDetailProps) => {
   const { title, url, description, image } = data || {};
 
