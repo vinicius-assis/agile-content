@@ -1,10 +1,14 @@
 .result-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   width: calc(100% - 10rem);
   margin: 30px auto 0;
+  gap: 20px;
 }
 
 @media (max-width: 680px) {
   .result-wrapper {
+    display: block;
     width: calc(100% - 3rem);
   }
 }
