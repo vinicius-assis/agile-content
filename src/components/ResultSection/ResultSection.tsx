@@ -14,7 +14,7 @@ const ResultSection = () => {
         <ResultItem showDetail={handleToggleShowDetail} />
         <ResultItem showDetail={handleToggleShowDetail} />
       </div>
-      <div>{showDetail && <ItemDetail />}</div>
+      {showDetail && <ItemDetail closeDetail={handleToggleShowDetail} />}
     </div>
   );
 };

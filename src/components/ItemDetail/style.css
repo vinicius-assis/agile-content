@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  z-index: 1;
   max-width: 400px;
   width: 100%;
   border: 1px solid #ccc;
@@ -35,4 +34,16 @@
   margin-bottom: 0.4rem;
 }
 
-/* @media (max-width: 680px) {} */
+@media (max-width: 680px) {
+  .result-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000046;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
