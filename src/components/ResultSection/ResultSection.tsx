@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ResultItem from "../ResultItem/ResultItem";
 import "./style.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -9,26 +9,12 @@ import NoResultContent from "../NoResultContent/NoResultContent";
 
 const ResultSection = () => {
   const [searchParams] = useSearchParams();
-  const getAnimals = useAnimalsList();
   const [showDetail, setShowDetail] = useState(false);
   const [selectedAnimal, setSelectedAnimal] = useState<IAnimal | undefined>(
     undefined
   );
-  const [items, setItems] = useState<IAnimalsList>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const queryParams = searchParams?.get("q") || "";
-
-  const handleList = async () => {
-    setIsLoading(true);
-    try {
-      const response = await getAnimals(queryParams);
-      setItems(response);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const { result: items, isLoading } = useAnimalsList(queryParams);
 
   const handleToggleShowDetail = (data?: IAnimal) => {
     if (showDetail && !data?.id) {
@@ -38,12 +24,6 @@ const ResultSection = () => {
       setShowDetail(true);
     }
   };
-
-  useEffect(() => {
-    if (queryParams) {
-      handleList();
-    }
-  }, [queryParams]);
 
   const SwitchComponent: React.FC = () => {
     if (!items?.length) {
