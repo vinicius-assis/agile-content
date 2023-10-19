@@ -2,15 +2,32 @@ import { useContext } from "react";
 import { CloseIcon, SearchIcon } from "../Icons/Icons";
 import "./style.css";
 import { SearchContext } from "../../context/SearchContext";
+import { useNavigate } from "react-router-dom";
 
-const SearchInputGroup = ({ className = "" }) => {
+interface ISearchInputGroupProps {
+  className?: string;
+  isResultPage?: boolean;
+}
+
+const SearchInputGroup = ({
+  className = "",
+  isResultPage,
+}: ISearchInputGroupProps) => {
   const { setInputSearch, inputSearch } = useContext(SearchContext);
+  const navigate = useNavigate();
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputSearch(event?.target?.value);
   };
 
   const handleClearInput = () => setInputSearch("");
+
+  const handleSearchSubmit = (event: React.KeyboardEvent) => {
+    if (isResultPage && event?.key === "Enter") {
+      console.log(event);
+      navigate(`/result?q=${inputSearch}`);
+    }
+  };
 
   return (
     <div className={`input-group ${className}`}>
@@ -22,6 +39,7 @@ const SearchInputGroup = ({ className = "" }) => {
         type="search"
         value={inputSearch}
         onChange={handleSearch}
+        onKeyDown={handleSearchSubmit}
       />
       <button className="clear-button" onClick={handleClearInput}>
         <CloseIcon />

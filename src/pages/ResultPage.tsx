@@ -11,7 +11,7 @@ const ResultPage = () => {
         <Link to="/">
           <GoogleIcon width="92" height="30" />
         </Link>
-        <SearchInputGroup />
+        <SearchInputGroup isResultPage />
       </Header>
       <div className="container -result">
         <ResultSection />
