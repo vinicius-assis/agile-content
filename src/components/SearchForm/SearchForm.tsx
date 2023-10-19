@@ -6,7 +6,10 @@ import { useContext } from "react";
 
 const SearchForm = () => {
   const { inputSearch } = useContext(SearchContext);
-  const handleSubmit = (event: React.FormEvent) => event?.preventDefault();
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event?.preventDefault();
+  };
 
   return (
     <form className="search-form" role="search" onSubmit={handleSubmit}>

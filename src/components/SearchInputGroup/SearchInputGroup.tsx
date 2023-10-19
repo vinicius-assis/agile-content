@@ -4,15 +4,7 @@ import "./style.css";
 import { SearchContext } from "../../context/SearchContext";
 import { useNavigate } from "react-router-dom";
 
-interface ISearchInputGroupProps {
-  className?: string;
-  isResultPage?: boolean;
-}
-
-const SearchInputGroup = ({
-  className = "",
-  isResultPage,
-}: ISearchInputGroupProps) => {
+const SearchInputGroup = ({ className = "" }) => {
   const { setInputSearch, inputSearch } = useContext(SearchContext);
   const navigate = useNavigate();
 
@@ -23,8 +15,7 @@ const SearchInputGroup = ({
   const handleClearInput = () => setInputSearch("");
 
   const handleSearchSubmit = (event: React.KeyboardEvent) => {
-    if (isResultPage && event?.key === "Enter") {
-      console.log(event);
+    if (event?.key === "Enter") {
       navigate(`/result?q=${inputSearch}`);
     }
   };
