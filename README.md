@@ -22,7 +22,11 @@
 
 ## Objectives
 
-- [ ] Build this application as a production grade code.
-- [ ] Focus on replicating the given screenshots/design
-- [ ] Provide at least one test validating some use cases
-- [ ] What would you have done differently if you had more time? Why?
+- [x] Build this application as a production grade code.
+- [x] Focus on replicating the given screenshots/design
+- [x] Provide at least one test validating some use cases
+- [x] What would you have done differently if you had more time? Why?
+
+```
+Maybe take more time in the styles, create anothers breakpoints.
+```
