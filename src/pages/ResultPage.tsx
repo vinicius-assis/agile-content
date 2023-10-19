@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Header from "../components/Header/Header";
 import { GoogleIcon } from "../components/Icons/Icons";
 import ResultSection from "../components/ResultSection/ResultSection";
 import SearchInputGroup from "../components/SearchInputGroup/SearchInputGroup";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { SearchContext } from "../context/SearchContext";
 
 const ResultPage = () => {
-  const { setInputSearch } = useContext(SearchContext);
+  const { setInputSearch, inputSearch } = useContext(SearchContext);
+  const [searchParams] = useSearchParams();
+  const queryParams = searchParams?.get("q") || "";
+
+  useEffect(() => {
+    if (queryParams && !inputSearch) {
+      setInputSearch(queryParams);
+    }
+  }, []);
 
   return (
     <>
