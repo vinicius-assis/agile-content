@@ -1,23 +1,16 @@
 import { useEffect, useState } from "react";
 import database from "../database";
+import filterAnimals from "../utils/filterAnimals";
 
-interface IUseAnimalsList {
+export interface IUseAnimalsList {
   isLoading?: boolean;
   result?: IAnimalsList | undefined;
 }
 
 const getList = (value: string) => {
-  return new Promise<IAnimalsList>((resolve) => {
+  return new Promise<IAnimalsList | undefined>((resolve) => {
     setTimeout(() => {
-      const items = database?.filter(({ title, description, type }) => {
-        const lowerValue = value?.toLowerCase();
-        const itemsReferences = [
-          title?.toLowerCase(),
-          description?.toLowerCase(),
-          type?.toLowerCase(),
-        ];
-        return itemsReferences?.includes(lowerValue);
-      });
+      const items = filterAnimals(database, value);
       resolve(items);
     }, 1000);
   });
