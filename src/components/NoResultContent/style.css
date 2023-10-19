@@ -1,0 +1,11 @@
+.no-result p {
+  margin-bottom: 1rem;
+}
+
+.no-result p span {
+  font-style: italic;
+}
+
+.no-result strong {
+  font-weight: 700;
+}

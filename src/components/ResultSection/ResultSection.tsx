@@ -5,6 +5,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import useAnimalsList from "../../hooks/useAnimalsList";
 import { useSearchParams } from "react-router-dom";
 import Skeleton from "../Skeleton/LoadingResult";
+import NoResultContent from "../NoResultContent/NoResultContent";
 
 const ResultSection = () => {
   const [searchParams] = useSearchParams();
@@ -44,21 +45,22 @@ const ResultSection = () => {
     }
   }, [queryParams]);
 
+  const SwitchComponent: React.FC = () => {
+    if (!items?.length) {
+      return <NoResultContent />;
+    }
+    return items?.map((animal) => (
+      <ResultItem
+        key={animal?.id}
+        showDetail={() => handleToggleShowDetail(animal)}
+        data={animal}
+      />
+    ));
+  };
+
   return (
     <div className="result-wrapper">
-      <div>
-        {!isLoading ? (
-          items?.map((animal) => (
-            <ResultItem
-              key={animal?.id}
-              showDetail={() => handleToggleShowDetail(animal)}
-              data={animal}
-            />
-          ))
-        ) : (
-          <Skeleton />
-        )}
-      </div>
+      <div>{!isLoading ? <SwitchComponent /> : <Skeleton />}</div>
       {showDetail && selectedAnimal && (
         <ItemDetail
           data={selectedAnimal}
