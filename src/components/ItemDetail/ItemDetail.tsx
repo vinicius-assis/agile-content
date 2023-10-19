@@ -1,12 +1,9 @@
 import "./style.css";
 
-interface IResultItemProps {
-  showDetail?: () => void;
-}
-
-const ResultItem = ({ showDetail }: IResultItemProps) => {
+const ItemDetail = () => {
   return (
-    <div className="result-item" onClick={showDetail}>
+    <div className="item-detail">
+      <span></span>
       <cite>https://www.globo.com</cite>
       <h2>Globo</h2>
       <p>
@@ -18,4 +15,4 @@ const ResultItem = ({ showDetail }: IResultItemProps) => {
   );
 };
 
-export default ResultItem;
+export default ItemDetail;
